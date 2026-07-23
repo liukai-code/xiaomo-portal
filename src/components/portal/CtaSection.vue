@@ -21,7 +21,7 @@ import { ArrowRight, Github } from 'lucide-vue-next'
 
         <a href="https://github.com/liukai-code/xiaomo-investment-agent" target="_blank" class="portal-btn-cta">
           <Github :size="24" />
-          GitHub
+          <span>GitHub</span>
           <ArrowRight :size="24" />
         </a>
       </div>

@@ -36,7 +36,7 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
       <div class="portal-header-actions portal-hide-mobile">
         <a href="https://github.com/liukai-code/xiaomo-investment-agent" target="_blank" class="portal-btn-primary">
           <Github :size="18" />
-          GitHub
+          <span>GitHub</span>
         </a>
       </div>
 
@@ -56,7 +56,7 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
         <a href="#faq" @click="isMobileMenuOpen = false">常见问题</a>
         <a href="https://github.com/liukai-code/xiaomo-investment-agent" target="_blank" class="portal-btn-primary" style="width: 100%">
           <Github :size="18" />
-          GitHub
+          <span>GitHub</span>
         </a>
       </div>
     </Transition>

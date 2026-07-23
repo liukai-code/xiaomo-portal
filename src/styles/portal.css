@@ -138,7 +138,15 @@
   transition: transform 0.2s;
 }
 
+.portal-btn-primary span {
+  transition: transform 0.2s;
+}
+
 .portal-btn-primary:hover svg {
+  transform: translateX(4px);
+}
+
+.portal-btn-primary:hover span {
   transform: translateX(4px);
 }
 
@@ -195,7 +203,15 @@
   transition: transform 0.3s;
 }
 
+.portal-btn-cta span {
+  transition: transform 0.3s;
+}
+
 .portal-btn-cta:hover svg {
+  transform: translateX(6px);
+}
+
+.portal-btn-cta:hover span {
   transform: translateX(6px);
 }
 

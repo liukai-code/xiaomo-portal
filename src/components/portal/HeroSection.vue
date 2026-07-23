@@ -32,7 +32,7 @@ import { Sparkles, ArrowRight, MessageSquare, Github } from 'lucide-vue-next'
       <div v-animate="300" class="portal-hero-actions">
         <a href="https://github.com/liukai-code/xiaomo-investment-agent" target="_blank" class="portal-btn-primary">
           <Github :size="20" />
-          GitHub
+          <span>GitHub</span>
           <ArrowRight :size="20" />
         </a>
         <a href="#features" class="portal-btn-outline">
