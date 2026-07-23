@@ -2,6 +2,7 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { Menu, X, Github } from 'lucide-vue-next'
+import GitHubStars from './GitHubStars.vue'
 
 const router = useRouter()
 const isScrolled = ref(false)
@@ -34,10 +35,7 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
       </nav>
 
       <div class="portal-header-actions portal-hide-mobile">
-        <a href="https://github.com/liukai-code/xiaomo-investment-agent" target="_blank" class="portal-btn-primary">
-          <Github :size="18" />
-          <span>GitHub</span>
-        </a>
+        <GitHubStars />
       </div>
 
       <button
@@ -54,10 +52,7 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
       <div v-if="isMobileMenuOpen" class="portal-mobile-menu portal-show-mobile">
         <a href="#features" @click="isMobileMenuOpen = false">功能</a>
         <a href="#faq" @click="isMobileMenuOpen = false">常见问题</a>
-        <a href="https://github.com/liukai-code/xiaomo-investment-agent" target="_blank" class="portal-btn-primary" style="width: 100%">
-          <Github :size="18" />
-          <span>GitHub</span>
-        </a>
+        <GitHubStars />
       </div>
     </Transition>
   </header>
