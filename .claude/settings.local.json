@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git rm *)",
+      "Bash(git commit *)"
+    ]
+  },
+  "enabledMcpjsonServers": [
+    "docx-editor",
+    "ppt-generator",
+    "pptx-viewer",
+    "carbone"
+  ]
+}

@@ -1,0 +1,35 @@
+:root {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --surface-2: #f1f5f9;
+  --border: #e2e8f0;
+  --text: #1e293b;
+  --text-dim: #94a3b8;
+  --accent: #2563eb;
+  --accent-dim: #2563eb18;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Noto Sans SC', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Portal 路由下解除 overflow 限制 */
+body.portal-scrollable {
+  overflow: auto;
+  height: auto;
+}
+
+#app {
+  width: 100vw;
+  min-height: 100vh;
+}
