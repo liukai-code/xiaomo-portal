@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ArrowRight } from 'lucide-vue-next'
+import { ArrowRight, Github } from 'lucide-vue-next'
 </script>
 
 <template>
@@ -19,10 +19,11 @@ import { ArrowRight } from 'lucide-vue-next'
 
         <p>立即体验 AI Agent 驱动的投资研究</p>
 
-        <button class="portal-btn-cta">
-          免费开始
+        <a href="https://github.com/liukai-code/xiaomo-investment-agent" target="_blank" class="portal-btn-cta">
+          <Github :size="24" />
+          GitHub
           <ArrowRight :size="24" />
-        </button>
+        </a>
       </div>
     </div>
   </section>

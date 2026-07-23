@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Sparkles, ArrowRight, MessageSquare } from 'lucide-vue-next'
+import { Sparkles, ArrowRight, MessageSquare, Github } from 'lucide-vue-next'
 </script>
 
 <template>
@@ -30,10 +30,11 @@ import { Sparkles, ArrowRight, MessageSquare } from 'lucide-vue-next'
 
       <!-- CTA Buttons -->
       <div v-animate="300" class="portal-hero-actions">
-        <button class="portal-btn-primary">
-          开始对话
+        <a href="https://github.com/liukai-code/xiaomo-investment-agent" target="_blank" class="portal-btn-primary">
+          <Github :size="20" />
+          GitHub
           <ArrowRight :size="20" />
-        </button>
+        </a>
         <a href="#features" class="portal-btn-outline">
           <MessageSquare :size="16" />
           了解更多

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
-import { Menu, X } from 'lucide-vue-next'
+import { Menu, X, Github } from 'lucide-vue-next'
 
 const router = useRouter()
 const isScrolled = ref(false)
@@ -34,9 +34,10 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
       </nav>
 
       <div class="portal-header-actions portal-hide-mobile">
-        <button class="portal-btn-primary">
-          开始使用
-        </button>
+        <a href="https://github.com/liukai-code/xiaomo-investment-agent" target="_blank" class="portal-btn-primary">
+          <Github :size="18" />
+          GitHub
+        </a>
       </div>
 
       <button
@@ -53,9 +54,10 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
       <div v-if="isMobileMenuOpen" class="portal-mobile-menu portal-show-mobile">
         <a href="#features" @click="isMobileMenuOpen = false">功能</a>
         <a href="#faq" @click="isMobileMenuOpen = false">常见问题</a>
-        <button class="portal-btn-primary" style="width: 100%">
-          开始使用
-        </button>
+        <a href="https://github.com/liukai-code/xiaomo-investment-agent" target="_blank" class="portal-btn-primary" style="width: 100%">
+          <Github :size="18" />
+          GitHub
+        </a>
       </div>
     </Transition>
   </header>
