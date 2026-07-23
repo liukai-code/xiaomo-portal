@@ -8,7 +8,10 @@
           </div>
           <span class="portal-serif">小墨</span>
         </div>
-        <p class="portal-footer-copy">&copy; 2025 小墨金融 AI 助手. All rights reserved.</p>
+        <div class="portal-footer-info">
+          <p class="portal-footer-copy">&copy; 2025 小墨金融 AI 助手. All rights reserved.</p>
+          <a href="https://beian.miit.gov.cn/" target="_blank" class="portal-footer-icp">陕ICP备2026019107号-1</a>
+        </div>
       </div>
     </div>
   </footer>
@@ -60,8 +63,32 @@
   color: var(--portal-text);
 }
 
+.portal-footer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (min-width: 768px) {
+  .portal-footer-info {
+    align-items: flex-end;
+  }
+}
+
 .portal-footer-copy {
   font-size: 14px;
   color: var(--portal-text-muted);
+}
+
+.portal-footer-icp {
+  font-size: 12px;
+  color: var(--portal-text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.portal-footer-icp:hover {
+  color: var(--portal-text);
 }
 </style>
