@@ -40,14 +40,6 @@ import { Sparkles, ArrowRight, MessageSquare, Github } from 'lucide-vue-next'
           了解更多
         </a>
       </div>
-
-      <!-- Product Screenshot -->
-      <div v-animate="400" class="portal-hero-screenshot">
-        <div class="portal-hero-screenshot-glow" />
-        <div class="portal-hero-screenshot-card">
-          <img src="/portal/Hero_img.png" alt="小墨 AI 对话界面" />
-        </div>
-      </div>
     </div>
   </section>
 </template>
@@ -153,51 +145,5 @@ import { Sparkles, ArrowRight, MessageSquare, Github } from 'lucide-vue-next'
     flex-direction: row;
     gap: 20px;
   }
-}
-
-.portal-hero-screenshot {
-  margin-top: 80px;
-  position: relative;
-  width: 100%;
-  padding: 0 16px;
-}
-
-@media (min-width: 640px) {
-  .portal-hero-screenshot {
-    padding: 0;
-  }
-}
-
-.portal-hero-screenshot-glow {
-  position: absolute;
-  inset: -16px;
-  background: linear-gradient(to bottom, rgba(37, 99, 235, 0.06), transparent);
-  border-radius: 48px;
-  filter: blur(16px);
-  z-index: -1;
-}
-
-.portal-hero-screenshot-card {
-  position: relative;
-  border-radius: 24px;
-  border: 1px solid rgba(230, 227, 227, 0.5);
-  background: rgba(242, 240, 233, 0.3);
-  padding: 8px;
-  backdrop-filter: blur(4px);
-  box-shadow:
-    0 25px 50px -12px rgba(0, 0, 0, 0.15),
-    0 0 0 1px rgba(0, 0, 0, 0.03);
-  overflow: hidden;
-  transition: transform 0.7s;
-}
-
-.portal-hero-screenshot-card:hover {
-  transform: scale(1.01);
-}
-
-.portal-hero-screenshot-card img {
-  width: 100%;
-  border-radius: 16px;
-  display: block;
 }
 </style>
