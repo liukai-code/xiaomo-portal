@@ -25,11 +25,12 @@ body {
 
 /* Portal 路由下解除 overflow 限制 */
 body.portal-scrollable {
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
   height: auto;
 }
 
 #app {
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
 }

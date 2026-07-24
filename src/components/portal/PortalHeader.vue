@@ -12,6 +12,16 @@ function onScroll() {
   isScrolled.value = window.scrollY > 0
 }
 
+function smoothScroll(e: Event, target: string) {
+  e.preventDefault()
+  isMobileMenuOpen.value = false
+  const el = document.querySelector(target)
+  if (el) {
+    const top = el.getBoundingClientRect().top + window.scrollY - 80
+    window.scrollTo({ top, behavior: 'smooth' })
+  }
+}
+
 onMounted(() => window.addEventListener('scroll', onScroll, { passive: true }))
 onUnmounted(() => window.removeEventListener('scroll', onScroll))
 </script>
@@ -30,8 +40,8 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
       </div>
 
       <nav class="portal-header-nav portal-hide-mobile">
-        <a href="#features">功能</a>
-        <a href="#faq">常见问题</a>
+        <a href="#features" @click="smoothScroll($event, '#features')">功能</a>
+        <a href="#faq" @click="smoothScroll($event, '#faq')">常见问题</a>
       </nav>
 
       <div class="portal-header-actions portal-hide-mobile">
@@ -50,8 +60,8 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
     <!-- Mobile menu -->
     <Transition name="mobile-menu">
       <div v-if="isMobileMenuOpen" class="portal-mobile-menu portal-show-mobile">
-        <a href="#features" @click="isMobileMenuOpen = false">功能</a>
-        <a href="#faq" @click="isMobileMenuOpen = false">常见问题</a>
+        <a href="#features" @click="smoothScroll($event, '#features')">功能</a>
+        <a href="#faq" @click="smoothScroll($event, '#faq')">常见问题</a>
         <GitHubStars />
       </div>
     </Transition>

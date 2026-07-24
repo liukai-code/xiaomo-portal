@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
-import { Bot, Calculator, BarChart3, PiggyBank, ChevronRight } from 'lucide-vue-next'
+import { Bot, Calculator, BarChart3, PiggyBank, Workflow, Brain, ChevronRight } from 'lucide-vue-next'
 
 interface FeatureItem {
   title: string
@@ -23,10 +23,10 @@ const features: FeatureCategory[] = [
     badge: 'AI 对话',
     badgeColor: 'background: rgba(37,99,235,0.1); color: #2563eb;',
     title: 'AI 智能对话',
-    desc: '上下文感知的多轮对话，流式输出，支持金融计算、行情查询等 30+ 工具调用',
+    desc: '上下文感知的多轮对话，流式输出，支持金融计算、行情查询等 40+ 工具调用',
     items: [
       { title: '流式对话', desc: '实时流式输出，打字机效果', image: '/portal/feature-ai.svg' },
-      { title: '工具调用', desc: '30+ 金融工具无缝集成', image: '/portal/feature-ai.svg' },
+      { title: '工具调用', desc: '40+ 金融工具无缝集成，8 大路由器智能分发', image: '/portal/feature-ai.svg' },
     ],
   },
   {
@@ -34,10 +34,32 @@ const features: FeatureCategory[] = [
     badge: '数据',
     badgeColor: 'background: rgba(22,163,74,0.1); color: #16a34a;',
     title: 'A 股数据全景',
-    desc: '44 个数据端点，覆盖行情、研报、龙虎榜、融资融券、解禁预警、行业轮动等',
+    desc: '44 个数据端点，13 大数据源，覆盖行情、研报、龙虎榜、融资融券、解禁预警、行业轮动等',
     items: [
-      { title: '行情数据', desc: '实时行情、K 线、分时图', image: '/portal/feature-data.svg' },
-      { title: '深度数据', desc: '龙虎榜、融资融券、北向资金', image: '/portal/feature-data.svg' },
+      { title: '行情数据', desc: '实时行情、K 线、分时图、逐笔成交', image: '/portal/feature-data.svg' },
+      { title: '深度数据', desc: '龙虎榜、融资融券、北向资金、大宗交易', image: '/portal/feature-data.svg' },
+    ],
+  },
+  {
+    icon: Workflow,
+    badge: '深度分析',
+    badgeColor: 'background: rgba(234,88,12,0.1); color: #ea580c;',
+    title: '多 Agent 深度分析',
+    desc: '5 层 DAG 工作流，多 Agent 并行协作，多空辩论 + 风险评估，生成结构化投研报告',
+    items: [
+      { title: '并行数据采集', desc: '市场、基本面、新闻 3 个分析师并行工作', image: '/portal/feature-ai.svg' },
+      { title: '多空辩论', desc: '多轮结构化辩论 + 风险三方评估', image: '/portal/feature-data.svg' },
+    ],
+  },
+  {
+    icon: Brain,
+    badge: '记忆',
+    badgeColor: 'background: rgba(168,85,247,0.1); color: #a855f7;',
+    title: '智能对话记忆',
+    desc: '多维用户画像自动学习，支持"记住我说的"显式记忆，跨会话持续理解你的投资偏好',
+    items: [
+      { title: '用户画像', desc: '投资风格、风险偏好、关注行业自动归纳', image: '/portal/feature-ai.svg' },
+      { title: '上下文记忆', desc: '对话摘要压缩，长会话连贯不丢失', image: '/portal/feature-data.svg' },
     ],
   },
   {
@@ -47,7 +69,7 @@ const features: FeatureCategory[] = [
     title: '专业金融工具',
     desc: '22 种金融计算器（复利、贷款、NPV、IRR、夏普比率等），支持 A 股/港股/美股实时行情',
     items: [
-      { title: '金融计算', desc: '复利、NPV、IRR、夏普比率', image: '/portal/feature-ai.svg' },
+      { title: '金融计算', desc: '复利、NPV、IRR、夏普比率、BigDecimal 精度', image: '/portal/feature-ai.svg' },
       { title: '多市场行情', desc: 'A 股、港股、美股实时报价', image: '/portal/feature-data.svg' },
     ],
   },
@@ -56,9 +78,9 @@ const features: FeatureCategory[] = [
     badge: '养基宝',
     badgeColor: 'background: rgba(168,85,247,0.1); color: #a855f7;',
     title: '养基宝集成',
-    desc: '基金组合跟踪，扫码登录，实时估值与指数行情一览',
+    desc: '基金组合跟踪，扫码登录，实时估值与指数行情一览，AI 可直接查询持仓数据',
     items: [
-      { title: '组合跟踪', desc: '持仓基金实时估值', image: '/portal/feature-ai.svg' },
+      { title: '组合跟踪', desc: '持仓基金实时估值，收益数据同步', image: '/portal/feature-ai.svg' },
       { title: '指数行情', desc: '主要指数实时行情概览', image: '/portal/feature-data.svg' },
     ],
   },

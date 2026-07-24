@@ -1,5 +1,14 @@
 <script setup lang="ts">
 import { Sparkles, ArrowRight, MessageSquare, Github } from 'lucide-vue-next'
+
+function smoothScroll(e: Event, target: string) {
+  e.preventDefault()
+  const el = document.querySelector(target)
+  if (el) {
+    const top = el.getBoundingClientRect().top + window.scrollY - 80
+    window.scrollTo({ top, behavior: 'smooth' })
+  }
+}
 </script>
 
 <template>
@@ -35,7 +44,7 @@ import { Sparkles, ArrowRight, MessageSquare, Github } from 'lucide-vue-next'
           <span>GitHub</span>
           <ArrowRight :size="20" />
         </a>
-        <a href="#features" class="portal-btn-outline">
+        <a href="#features" class="portal-btn-outline" @click="smoothScroll($event, '#features')">
           <MessageSquare :size="16" />
           了解更多
         </a>

@@ -44,10 +44,8 @@ onMounted(async () => {
     <span class="github-stars-text">Star on GitHub</span>
 
     <!-- Separator + Count -->
-    <template v-if="stars !== null">
-      <span class="github-stars-separator" />
-      <span class="github-stars-count">{{ stars?.toLocaleString() }}</span>
-    </template>
+    <span class="github-stars-separator" />
+    <span class="github-stars-count">{{ stars !== null ? stars.toLocaleString() : '--' }}</span>
   </a>
 </template>
 
@@ -58,6 +56,7 @@ onMounted(async () => {
   align-items: center;
   gap: 8px;
   height: 32px;
+  min-width: 140px;
   padding: 0 12px;
   border-radius: 9999px;
   background: rgba(249, 249, 247, 0.5);
