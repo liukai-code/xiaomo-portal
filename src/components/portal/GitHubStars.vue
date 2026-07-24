@@ -1,22 +1,10 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 import { Star } from 'lucide-vue-next'
 
 const REPO_URL = 'https://github.com/liukai-code/xiaomo-investment-agent'
-const API_URL = 'https://api.github.com/repos/liukai-code/xiaomo-investment-agent'
 
-const stars = ref<number | null>(null)
 const isHovered = ref(false)
-
-onMounted(async () => {
-  try {
-    const res = await fetch(API_URL)
-    const data = await res.json()
-    stars.value = data.stargazers_count
-  } catch (error) {
-    console.error('Error fetching GitHub stars:', error)
-  }
-})
 </script>
 
 <template>
@@ -42,10 +30,6 @@ onMounted(async () => {
 
     <!-- Text -->
     <span class="github-stars-text">Star on GitHub</span>
-
-    <!-- Separator + Count -->
-    <span class="github-stars-separator" />
-    <span class="github-stars-count">{{ stars !== null ? stars.toLocaleString() : '--' }}</span>
   </a>
 </template>
 
@@ -56,7 +40,6 @@ onMounted(async () => {
   align-items: center;
   gap: 8px;
   height: 32px;
-  min-width: 140px;
   padding: 0 12px;
   border-radius: 9999px;
   background: rgba(249, 249, 247, 0.5);
@@ -114,27 +97,6 @@ onMounted(async () => {
   z-index: 1;
   font-size: 13px;
   font-weight: 500;
-  color: var(--portal-text);
-}
-
-.github-stars-separator {
-  position: relative;
-  z-index: 1;
-  width: 1px;
-  height: 12px;
-  background: rgba(0, 0, 0, 0.15);
-  transition: background 0.3s;
-}
-
-.github-stars-btn:hover .github-stars-separator {
-  background: rgba(0, 0, 0, 0.25);
-}
-
-.github-stars-count {
-  position: relative;
-  z-index: 1;
-  font-size: 13px;
-  font-variant-numeric: tabular-nums;
   color: var(--portal-text);
 }
 
