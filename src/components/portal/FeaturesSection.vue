@@ -34,7 +34,7 @@ const features: FeatureCategory[] = [
     badge: '数据',
     badgeColor: 'background: rgba(22,163,74,0.1); color: #16a34a;',
     title: 'A 股数据全景',
-    desc: '44 个数据端点，13 大数据源，覆盖行情、研报、龙虎榜、融资融券、解禁预警、行业轮动等',
+    desc: '55 个数据端点，13 大数据源，覆盖行情、研报、龙虎榜、融资融券、解禁预警、行业轮动等',
     items: [
       { title: '行情数据', desc: '实时行情、K 线、分时图、逐笔成交', image: '/portal/feature-data.svg' },
       { title: '深度数据', desc: '龙虎榜、融资融券、北向资金、大宗交易', image: '/portal/feature-data.svg' },
