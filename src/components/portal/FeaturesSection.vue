@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
-import { Bot, Calculator, BarChart3, PiggyBank, Workflow, Brain, ChevronRight } from 'lucide-vue-next'
+import { Calculator, BarChart3, PiggyBank, Workflow, Brain, Server, ListChecks, ChevronRight } from 'lucide-vue-next'
 
 interface FeatureItem {
   title: string
@@ -18,17 +18,6 @@ interface FeatureCategory {
 }
 
 const features: FeatureCategory[] = [
-  {
-    icon: Bot,
-    badge: 'AI 对话',
-    badgeColor: 'background: rgba(37,99,235,0.1); color: #2563eb;',
-    title: 'AI 智能对话',
-    desc: '上下文感知的多轮对话，流式输出，支持金融计算、行情查询等 40+ 工具调用',
-    items: [
-      { title: '流式对话', desc: '实时流式输出，打字机效果', image: '/portal/feature-ai.svg' },
-      { title: '工具调用', desc: '40+ 金融工具无缝集成，8 大路由器智能分发', image: '/portal/feature-ai.svg' },
-    ],
-  },
   {
     icon: BarChart3,
     badge: '数据',
@@ -49,6 +38,17 @@ const features: FeatureCategory[] = [
     items: [
       { title: '并行数据采集', desc: '市场、基本面、新闻 3 个分析师并行工作', image: '/portal/feature-ai.svg' },
       { title: '多空辩论', desc: '多轮结构化辩论 + 风险三方评估', image: '/portal/feature-data.svg' },
+    ],
+  },
+  {
+    icon: ListChecks,
+    badge: '规划',
+    badgeColor: 'background: rgba(234,88,12,0.1); color: #ea580c;',
+    title: '复杂任务自主规划',
+    desc: '自动判断执行模式，复杂任务拆解为结构化步骤逐步执行，让多步分析有条不紊',
+    items: [
+      { title: '智能模式判断', desc: '规则判断 DIRECT / PARALLEL / PLANNING 三种执行模式', image: '/portal/feature-ai.svg' },
+      { title: '计划可视化', desc: '执行计划实时推送到前端，用户可追踪每步进度', image: '/portal/feature-data.svg' },
     ],
   },
   {
@@ -82,6 +82,17 @@ const features: FeatureCategory[] = [
     items: [
       { title: '组合跟踪', desc: '持仓基金实时估值，收益数据同步', image: '/portal/feature-ai.svg' },
       { title: '指数行情', desc: '主要指数实时行情概览', image: '/portal/feature-data.svg' },
+    ],
+  },
+  {
+    icon: Server,
+    badge: '部署',
+    badgeColor: 'background: rgba(14,165,233,0.1); color: #0ea5e9;',
+    title: '一键部署 · 多用户支持',
+    desc: 'Docker 容器化部署，支持多用户独立使用，对话记录互相隔离，一键上云即开即用',
+    items: [
+      { title: '容器化部署', desc: 'Docker 一键部署，开箱即用无需配置', image: '/portal/feature-data.svg' },
+      { title: '多用户隔离', desc: '独立会话与记忆，多用户互不干扰', image: '/portal/feature-ai.svg' },
     ],
   },
 ]
