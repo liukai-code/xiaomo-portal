@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
 import { Calculator, BarChart3, PiggyBank, Workflow, Brain, Server, ListChecks, ChevronRight } from 'lucide-vue-next'
+import type { Component } from 'vue'
 
 interface FeatureItem {
   title: string
@@ -9,7 +10,7 @@ interface FeatureItem {
 }
 
 interface FeatureCategory {
-  icon: typeof Bot
+  icon: Component
   badge: string
   badgeColor: string
   title: string
