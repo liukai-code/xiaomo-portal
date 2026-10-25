@@ -4,6 +4,7 @@ import router from './router'
 import { vAnimate } from './composables/useScrollAnimation'
 
 import './styles/variables.css'
+import './styles/fonts.css'
 import './styles/portal.css'
 
 const app = createApp(App)
